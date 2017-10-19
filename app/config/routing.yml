@@ -1,3 +1,27 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+wcs_cova_terrain:
+    resource: "@WCSCovaBundle/Controller/TerrainController.php"
+    type:     annotation
+
+wcs_cova_terrain:
+    resource: "@WCSCovaBundle/Controller/TerrainController.php"
+    type:     annotation
+
+wcs_cova_flight:
+    resource: "@WCSCovaBundle/Controller/FlightController.php"
+    type:     annotation
+
+wcs_cova_reservation:
+    resource: "@WCSCovaBundle/Controller/ReservationController.php"
+    type:     annotation
+
+wcs_cova_plane_model:
+    resource: "@WCSCovaBundle/Controller/PlaneModelController.php"
+    type:     annotation
+
+wcs_cova:
+    resource: "@WCSCovaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation
