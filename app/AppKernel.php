@@ -2,7 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
-use WCS\CovaBundle;
+use WCS\CoavBundle;
 
 class AppKernel extends Kernel
 {
@@ -16,7 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new WCS\CovaBundle\WCSCovaBundle(),
+            new WCS\CoavBundle\WCSCoavBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

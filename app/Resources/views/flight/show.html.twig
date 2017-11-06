@@ -1,3 +1,4 @@
+
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -10,20 +11,40 @@
                 <td>{{ flight.id }}</td>
             </tr>
             <tr>
-                <th>Nbreservedseats</th>
-                <td>{{ flight.nbReservedSeats }}</td>
+                <th>Departure</th>
+                <td>{{ flight.departure }}</td>
+            </tr>
+            <tr>
+                <th>Arrival</th>
+                <td>{{ flight.arrival }}</td>
+            </tr>
+            <tr>
+                <th>Nbfreeseats</th>
+                <td>{{ flight.nbFreeSeats }}</td>
+            </tr>
+            <tr>
+                <th>Seatprice</th>
+                <td>{{ flight.seatPrice }}</td>
+            </tr>
+            <tr>
+                <th>Takeofftime</th>
+                <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Publicationdate</th>
                 <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Passenger</th>
-                <td>{{ flight.passenger }}</td>
+                <th>Description</th>
+                <td>{{ flight.description }}</td>
             </tr>
             <tr>
-                <th>Flight</th>
-                <td>{{ flight.flight }}</td>
+                <th>Pilot</th>
+                <td>{{ flight.pilot }}</td>
+            </tr>
+            <tr>
+                <th>Plane</th>
+                <td>{{ flight.plane }}</td>
             </tr>
             <tr>
                 <th>Wasdone</th>

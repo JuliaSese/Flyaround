@@ -1,25 +1,41 @@
-wcs_cova_terrain:
-    resource: "@WCSCovaBundle/Controller/TerrainController.php"
+wcs_coav_review:
+    resource: "@WCSCoavBundle/Controller/ReviewController.php"
     type:     annotation
 
-wcs_cova_terrain:
-    resource: "@WCSCovaBundle/Controller/TerrainController.php"
+wcs_coav_reservation:
+    resource: "@WCSCoavBundle/Controller/ReservationController.php"
     type:     annotation
 
-wcs_cova_flight:
-    resource: "@WCSCovaBundle/Controller/FlightController.php"
+wcs_coav_reservation:
+    resource: "@WCSCoavBundle/Controller/ReservationController.php"
     type:     annotation
 
-wcs_cova_reservation:
-    resource: "@WCSCovaBundle/Controller/ReservationController.php"
+wcs_coav_user:
+    resource: "@WCSCoavBundle/Controller/UserController.php"
     type:     annotation
 
-wcs_cova_plane_model:
-    resource: "@WCSCovaBundle/Controller/PlaneModelController.php"
+wcs_coav_terrain:
+    resource: "@WCSCoavBundle/Controller/TerrainController.php"
     type:     annotation
 
-wcs_cova:
-    resource: "@WCSCovaBundle/Resources/config/routing.yml"
+wcs_coav_terrain:
+    resource: "@WCSCoavBundle/Controller/TerrainController.php"
+    type:     annotation
+
+wcs_coav_flight:
+    resource: "@WCSCoavBundle/Controller/FlightController.php"
+    type:     annotation
+
+wcs_coav_reservation:
+    resource: "@WCSCoavBundle/Controller/ReservationController.php"
+    type:     annotation
+
+wcs_coav_plane_model:
+    resource: "@WCSCoavBundle/Controller/PlaneModelController.php"
+    type:     annotation
+
+wcs_coav:
+    resource: "@WCSCoavBundle/Resources/config/routing.yml"
     prefix:   /
 
 # app:

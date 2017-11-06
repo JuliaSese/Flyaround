@@ -10,40 +10,20 @@
                 <td>{{ reservation.id }}</td>
             </tr>
             <tr>
-                <th>Departure</th>
-                <td>{{ reservation.departure }}</td>
-            </tr>
-            <tr>
-                <th>Arrival</th>
-                <td>{{ reservation.arrival }}</td>
-            </tr>
-            <tr>
-                <th>Nbfreeseats</th>
-                <td>{{ reservation.nbFreeSeats }}</td>
-            </tr>
-            <tr>
-                <th>Seatprice</th>
-                <td>{{ reservation.seatPrice }}</td>
-            </tr>
-            <tr>
-                <th>Takeofftime</th>
-                <td>{% if reservation.takeOffTime %}{{ reservation.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <th>Nbreservedseats</th>
+                <td>{{ reservation.nbReservedSeats }}</td>
             </tr>
             <tr>
                 <th>Publicationdate</th>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>{{ reservation.description }}</td>
+                <th>Passenger</th>
+                <td>{%for reservation in reservation.passenger %}{{reservation.userName}} {%endfor%}</td>
             </tr>
             <tr>
-                <th>Pilot</th>
-                <td>{{ reservation.pilot }}</td>
-            </tr>
-            <tr>
-                <th>Plane</th>
-                <td>{{ reservation.plane }}</td>
+                <th>Flight</th>
+                <td>{{ reservation.flight }}</td>
             </tr>
             <tr>
                 <th>Wasdone</th>

@@ -16,7 +16,7 @@
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="WCSCovaBundle">WCS\CovaBundle\WCSCovaBundle</parameter>
+      <parameter key="WCSCoavBundle">WCS\CoavBundle\WCSCoavBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -59,10 +59,10 @@
         <parameter key="path">/var/www/html/flyaround/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
-      <parameter key="WCSCovaBundle" type="collection">
+      <parameter key="WCSCoavBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/var/www/html/flyaround/src/WCS/CovaBundle</parameter>
-        <parameter key="namespace">WCS\CovaBundle</parameter>
+        <parameter key="path">/var/www/html/flyaround/src/WCS/CoavBundle</parameter>
+        <parameter key="namespace">WCS\CoavBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -621,7 +621,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <argument>/var/www/html/flyaround/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -631,7 +631,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1388,14 +1388,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2181,12 +2173,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>59e8b9a96c3738.86388422</argument>
+      <argument>59fcafb184eae2.23565541</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>59e8b9a96c3738.86388422</argument>
+      <argument>59fcafb184eae2.23565541</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2364,8 +2356,8 @@
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/html/flyaround/src/WCS/CovaBundle/Resources/views</argument>
-        <argument>WCSCova</argument>
+        <argument>/var/www/html/flyaround/src/WCS/CoavBundle/Resources/views</argument>
+        <argument>WCSCoav</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/flyaround/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -2510,8 +2502,8 @@
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/html/flyaround/src/WCS/CovaBundle/Resources/views</argument>
-        <argument>WCSCova</argument>
+        <argument>/var/www/html/flyaround/src/WCS/CoavBundle/Resources/views</argument>
+        <argument>WCSCoav</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/flyaround/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -2914,7 +2906,7 @@
     <service id="doctrine.orm.default_configuration" class="Doctrine\ORM\Configuration" public="false">
       <call method="setEntityNamespaces">
         <argument type="collection">
-          <argument key="WCSCovaBundle">WCS\CovaBundle\Entity</argument>
+          <argument key="WCSCoavBundle">WCS\CoavBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -2957,13 +2949,13 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>/var/www/html/flyaround/src/WCS/CovaBundle/Entity</argument>
+        <argument>/var/www/html/flyaround/src/WCS/CoavBundle/Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
-        <argument>WCS\CovaBundle\Entity</argument>
+        <argument>WCS\CoavBundle\Entity</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
@@ -3458,7 +3450,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>kzh0KqQVCO</argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <argument>/var/www/html/flyaround/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3466,7 +3458,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>OAY948WFFv</argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <argument>/var/www/html/flyaround/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3474,7 +3466,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>XV-xv31VAq</argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <argument>/var/www/html/flyaround/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3482,7 +3474,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>iMgyMtRMqE</argument>
       <argument>0</argument>
-      <argument>jIDs3pxhP8ECHKaRGFSOQ9</argument>
+      <argument>Li0Q2i0BrPs2QyMoaJdvRY</argument>
       <argument>/var/www/html/flyaround/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

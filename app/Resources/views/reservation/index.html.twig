@@ -7,15 +7,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Nbfreeseats</th>
-                <th>Seatprice</th>
-                <th>Takeofftime</th>
+                <th>Nbreservedseats</th>
                 <th>Publicationdate</th>
-                <th>Description</th>
-                <th>Pilot</th>
-                <th>Plane</th>
+                <th>Passenger</th>
+                <th>Flight</th>
                 <th>Wasdone</th>
                 <th>Actions</th>
             </tr>
@@ -24,15 +19,10 @@
         {% for reservation in reservations %}
             <tr>
                 <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
-                <td>{{ reservation.departure }}</td>
-                <td>{{ reservation.arrival }}</td>
-                <td>{{ reservation.nbFreeSeats }}</td>
-                <td>{{ reservation.seatPrice }}</td>
-                <td>{% if reservation.takeOffTime %}{{ reservation.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ reservation.nbReservedSeats }}</td>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ reservation.description }}</td>
-                <td>{{ reservation.pilot }}</td>
-                <td>{{ reservation.plane }}</td>
+                <td>{%for reservation in reservation.passenger %}{{reservation.userName}} {%endfor%}</td>
+                <td>{{ reservation.flight }}</td>
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>

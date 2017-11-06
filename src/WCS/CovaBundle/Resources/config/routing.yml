@@ -1,3 +1,0 @@
-wcs_cova_homepage:
-    path:     /
-    defaults: { _controller: WCSCovaBundle:Default:index }
