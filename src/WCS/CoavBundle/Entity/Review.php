@@ -37,14 +37,14 @@ class Review
     private $text;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviews")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reviews")
     * @ORM\JoinColumn(nullable=false)
     */
     private $userRated;
 
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviews")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reviews")
     * @ORM\JoinColumn(nullable=false)
     */
 

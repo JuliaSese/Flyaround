@@ -81,14 +81,14 @@ class Flight
 
 
     /**
-    * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="user")
+    * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
     * @ORM\JoinColumn(nullable=false)
     */
     private $pilot;
 
 
     /**
-    * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\PlaneModel", inversedBy="model")
+    * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\PlaneModel")
     * @ORM\JoinColumn(nullable=false)
     */
     private $plane;
@@ -103,7 +103,7 @@ class Flight
     private $wasDone;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="flight")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Resrevation")
     */
     private $reservations;
 
