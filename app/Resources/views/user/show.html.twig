@@ -26,6 +26,10 @@
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
+                <th>Phonenumber</th>
+                <td>{{ user.phoneNumber }}</td>
+            </tr>
+            <tr>
                 <th>Birthdate</th>
                 <td>{% if user.birthDate %}{{ user.birthDate|date('Y-m-d') }}{% endif %}</td>
             </tr>
@@ -40,10 +44,6 @@
             <tr>
                 <th>Note</th>
                 <td>{{ user.note }}</td>
-            </tr>
-            <tr>
-                <th>Reviews</th>
-                <td>{%for review in user.reviews %}{{review.reviewAuthor}} {%endfor%}</td>
             </tr>
             <tr>
                 <th>Isacertifiedpilot</th>

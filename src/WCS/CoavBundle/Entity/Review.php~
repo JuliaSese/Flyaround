@@ -13,13 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Review
 {
 
-    /*Adding personnal methods */
     public function __toString()
     {
-            //Return the terrain object with "[userRated] - [REVIEWAUTHOR]" format when __toString is called.
-            return $this->userRated . " - " . $this->reviewAuthor;
+        return $this->text . "-" . $this->userRated . $this->reviewAuthor . $this->publicationDate . $this->note;
     }
 
+    
     /**
      * @var int
      *
@@ -32,44 +31,44 @@ class Review
     /**
      * @var string
      *
-     * @ORM\Column(name="text", type="text")
+     * @ORM\Column(name="text", type="text", nullable=false)
      */
     private $text;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviews")
-    * @ORM\JoinColumn(nullable=false)
-    */
+     * @var string
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="userRateds")
+     * @ORM\JoinColumn(nullable=false)
+     */
     private $userRated;
 
+    /**
+     * @var string
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="reviewAuthors")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $reviewAuthor;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviews")
-    * @ORM\JoinColumn(nullable=false)
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reviews")
     */
-
-    private $reviewAuthor;
+    private $reviewss;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="publicationDate", type="datetime")
+     * @ORM\Column(name="publicationDate", type="datetime", nullable=false)
      */
     private $publicationDate;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="note", type="smallint")
+     * @ORM\Column(name="note", type="smallint", nullable=false)
      */
     private $note;
-
-    // /**
-    // * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviews")
-    // * @ORM\JoinColumn(nullable=false)
-    // */
-    // private $user;
-
 
 
     /**
@@ -206,136 +205,40 @@ class Review
      */
     public function __construct()
     {
-        $this->reviews = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->reviewss = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
-     * Add review
+     * Add reviewss
      *
-     * @param \WCS\CoavBundle\Entity\User $review
+     * @param \WCS\CoavBundle\Entity\User $reviewss
      *
      * @return Review
      */
-    public function addReview(\WCS\CoavBundle\Entity\User $review)
+    public function addReviewss(\WCS\CoavBundle\Entity\User $reviewss)
     {
-        $this->reviews[] = $review;
+        $this->reviewss[] = $reviewss;
 
         return $this;
     }
 
     /**
-     * Remove review
+     * Remove reviewss
      *
-     * @param \WCS\CoavBundle\Entity\User $review
+     * @param \WCS\CoavBundle\Entity\User $reviewss
      */
-    public function removeReview(\WCS\CoavBundle\Entity\User $review)
+    public function removeReviewss(\WCS\CoavBundle\Entity\User $reviewss)
     {
-        $this->reviews->removeElement($review);
+        $this->reviewss->removeElement($reviewss);
     }
 
     /**
-     * Get reviews
+     * Get reviewss
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getReviews()
+    public function getReviewss()
     {
-        return $this->reviews;
-    }
-
-    /**
-     * Add userRated
-     *
-     * @param \WCS\CoavBundle\Entity\User $userRated
-     *
-     * @return Review
-     */
-    public function addUserRated(\WCS\CoavBundle\Entity\User $userRated)
-    {
-        $this->userRated[] = $userRated;
-
-        return $this;
-    }
-
-    /**
-     * Remove userRated
-     *
-     * @param \WCS\CoavBundle\Entity\User $userRated
-     */
-    public function removeUserRated(\WCS\CoavBundle\Entity\User $userRated)
-    {
-        $this->userRated->removeElement($userRated);
-    }
-
-    /**
-     * Set user
-     *
-     * @param \WCS\CoavBundle\Entity\User $user
-     *
-     * @return Review
-     */
-    public function setUser(\WCS\CoavBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \WCS\CoavBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
-     * Add user
-     *
-     * @param \WCS\CoavBundle\Entity\Review $user
-     *
-     * @return Review
-     */
-    public function addUser(\WCS\CoavBundle\Entity\Review $user)
-    {
-        $this->user[] = $user;
-
-        return $this;
-    }
-
-    /**
-     * Remove user
-     *
-     * @param \WCS\CoavBundle\Entity\Review $user
-     */
-    public function removeUser(\WCS\CoavBundle\Entity\Review $user)
-    {
-        $this->user->removeElement($user);
-    }
-
-    /**
-     * Add reviewAuthor
-     *
-     * @param \WCS\CoavBundle\Entity\Review $reviewAuthor
-     *
-     * @return Review
-     */
-    public function addReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-        $this->reviewAuthor[] = $reviewAuthor;
-
-        return $this;
-    }
-
-    /**
-     * Remove reviewAuthor
-     *
-     * @param \WCS\CoavBundle\Entity\Review $reviewAuthor
-     */
-    public function removeReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-        $this->reviewAuthor->removeElement($reviewAuthor);
+        return $this->reviewss;
     }
 }

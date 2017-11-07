@@ -64,10 +64,10 @@ class Terrain extends \WCS\CoavBundle\Entity\Terrain implements \Doctrine\ORM\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'name', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'icao', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'latitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'longitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'address', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'city', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'zipcode', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'country', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'departures', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'arrivals'];
+            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'name', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'icao', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'departures', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'arrivals', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'latitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'longitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'address', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'city', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'zipcode', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'country'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'name', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'icao', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'latitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'longitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'address', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'city', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'zipcode', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'country', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'departures', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'arrivals'];
+        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'name', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'icao', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'departures', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'arrivals', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'latitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'longitude', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'address', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'city', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'zipcode', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Terrain' . "\0" . 'country'];
     }
 
     /**
@@ -351,28 +351,6 @@ class Terrain extends \WCS\CoavBundle\Entity\Terrain implements \Doctrine\ORM\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getZipcode', []);
 
         return parent::getZipcode();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setCon($con)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCon', [$con]);
-
-        return parent::setCon($con);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getCon()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCon', []);
-
-        return parent::getCon();
     }
 
     /**

@@ -64,10 +64,10 @@ class Review extends \WCS\CoavBundle\Entity\Review implements \Doctrine\ORM\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'text', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'userRated', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'publicationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'note'];
+            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'text', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'userRated', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewss', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'publicationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'note'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'text', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'userRated', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'publicationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'note'];
+        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'text', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'userRated', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'reviewss', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'publicationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\Review' . "\0" . 'note'];
     }
 
     /**
@@ -312,122 +312,34 @@ class Review extends \WCS\CoavBundle\Entity\Review implements \Doctrine\ORM\Prox
     /**
      * {@inheritDoc}
      */
-    public function addReview(\WCS\CoavBundle\Entity\User $review)
+    public function addReviewss(\WCS\CoavBundle\Entity\User $reviewss)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReview', [$review]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReviewss', [$reviewss]);
 
-        return parent::addReview($review);
+        return parent::addReviewss($reviewss);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeReview(\WCS\CoavBundle\Entity\User $review)
+    public function removeReviewss(\WCS\CoavBundle\Entity\User $reviewss)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReview', [$review]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReviewss', [$reviewss]);
 
-        return parent::removeReview($review);
+        return parent::removeReviewss($reviewss);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getReviews()
+    public function getReviewss()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReviews', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReviewss', []);
 
-        return parent::getReviews();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addUserRated(\WCS\CoavBundle\Entity\User $userRated)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addUserRated', [$userRated]);
-
-        return parent::addUserRated($userRated);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeUserRated(\WCS\CoavBundle\Entity\User $userRated)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeUserRated', [$userRated]);
-
-        return parent::removeUserRated($userRated);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setUser(\WCS\CoavBundle\Entity\User $user = NULL)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUser', [$user]);
-
-        return parent::setUser($user);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getUser()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUser', []);
-
-        return parent::getUser();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addUser(\WCS\CoavBundle\Entity\Review $user)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addUser', [$user]);
-
-        return parent::addUser($user);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeUser(\WCS\CoavBundle\Entity\Review $user)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeUser', [$user]);
-
-        return parent::removeUser($user);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReviewAuthor', [$reviewAuthor]);
-
-        return parent::addReviewAuthor($reviewAuthor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReviewAuthor', [$reviewAuthor]);
-
-        return parent::removeReviewAuthor($reviewAuthor);
+        return parent::getReviewss();
     }
 
 }

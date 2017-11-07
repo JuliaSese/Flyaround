@@ -15,7 +15,7 @@ class PlaneModelType extends AbstractType
     {
         $builder->add('model')->add('manufacturer')->add('cruiseSpeed')->add('planeNbSeats')->add('isAvailable');
     }
-
+    
     /**
      * {@inheritdoc}
      */

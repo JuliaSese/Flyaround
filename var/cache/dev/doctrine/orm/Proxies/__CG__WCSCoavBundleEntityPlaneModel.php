@@ -64,10 +64,10 @@ class PlaneModel extends \WCS\CoavBundle\Entity\PlaneModel implements \Doctrine\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'plane'];
+            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planes', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'plane'];
+        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planes', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'WCS\\CoavBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable'];
     }
 
     /**
@@ -173,17 +173,6 @@ class PlaneModel extends \WCS\CoavBundle\Entity\PlaneModel implements \Doctrine\
     }
 
     
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
-
-        return parent::__toString();
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -312,50 +301,6 @@ class PlaneModel extends \WCS\CoavBundle\Entity\PlaneModel implements \Doctrine\
     /**
      * {@inheritDoc}
      */
-    public function setPlane(\WCS\CoavBundle\Entity\Flight $plane)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlane', [$plane]);
-
-        return parent::setPlane($plane);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPlane()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlane', []);
-
-        return parent::getPlane();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addModel(\WCS\CoavBundle\Entity\Flight $model)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addModel', [$model]);
-
-        return parent::addModel($model);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeModel(\WCS\CoavBundle\Entity\Flight $model)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeModel', [$model]);
-
-        return parent::removeModel($model);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function addPlane(\WCS\CoavBundle\Entity\Flight $plane)
     {
 
@@ -373,6 +318,17 @@ class PlaneModel extends \WCS\CoavBundle\Entity\PlaneModel implements \Doctrine\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removePlane', [$plane]);
 
         return parent::removePlane($plane);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPlanes()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlanes', []);
+
+        return parent::getPlanes();
     }
 
 }

@@ -64,10 +64,10 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'flights', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'pilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userRated'];
+            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservation', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'pilots', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userRateds', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'phoneNumber', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'flights', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'pilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthor', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userRated'];
+        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservation', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'pilots', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userRateds', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'phoneNumber', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
     }
 
     /**
@@ -290,6 +290,28 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
+    public function setPhoneNumber($phoneNumber)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoneNumber', [$phoneNumber]);
+
+        return parent::setPhoneNumber($phoneNumber);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPhoneNumber()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhoneNumber', []);
+
+        return parent::getPhoneNumber();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setBirthDate($birthDate)
     {
 
@@ -466,78 +488,12 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function getReservations()
+    public function getReservation()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReservations', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReservation', []);
 
-        return parent::getReservations();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addFlight(\WCS\CoavBundle\Entity\Flight $flight)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addFlight', [$flight]);
-
-        return parent::addFlight($flight);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeFlight(\WCS\CoavBundle\Entity\Flight $flight)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeFlight', [$flight]);
-
-        return parent::removeFlight($flight);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getFlights()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFlights', []);
-
-        return parent::getFlights();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoneNumber', [$phoneNumber]);
-
-        return parent::setPhoneNumber($phoneNumber);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPhoneNumber()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhoneNumber', []);
-
-        return parent::getPhoneNumber();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getFlight()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFlight', []);
-
-        return parent::getFlight();
+        return parent::getReservation();
     }
 
     /**
@@ -565,73 +521,18 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function getPilot()
+    public function getPilots()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPilot', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPilots', []);
 
-        return parent::getPilot();
+        return parent::getPilots();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function addReview(\WCS\CoavBundle\Entity\Review $review)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReview', [$review]);
-
-        return parent::addReview($review);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeReview(\WCS\CoavBundle\Entity\Review $review)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReview', [$review]);
-
-        return parent::removeReview($review);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReviewAuthor', [$reviewAuthor]);
-
-        return parent::addReviewAuthor($reviewAuthor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeReviewAuthor(\WCS\CoavBundle\Entity\Review $reviewAuthor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReviewAuthor', [$reviewAuthor]);
-
-        return parent::removeReviewAuthor($reviewAuthor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getReviewAuthor()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReviewAuthor', []);
-
-        return parent::getReviewAuthor();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addUserRated(\WCS\CoavBundle\Entity\Review $userRated)
+    public function addUserRated(\WCS\CoavBundle\Entity\User $userRated)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'addUserRated', [$userRated]);
@@ -642,7 +543,7 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function removeUserRated(\WCS\CoavBundle\Entity\Review $userRated)
+    public function removeUserRated(\WCS\CoavBundle\Entity\User $userRated)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeUserRated', [$userRated]);
@@ -653,12 +554,45 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function getUserRated()
+    public function getUserRateds()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUserRated', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUserRateds', []);
 
-        return parent::getUserRated();
+        return parent::getUserRateds();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addReviewAuthor(\WCS\CoavBundle\Entity\User $reviewAuthor)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReviewAuthor', [$reviewAuthor]);
+
+        return parent::addReviewAuthor($reviewAuthor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeReviewAuthor(\WCS\CoavBundle\Entity\User $reviewAuthor)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReviewAuthor', [$reviewAuthor]);
+
+        return parent::removeReviewAuthor($reviewAuthor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getReviewAuthors()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReviewAuthors', []);
+
+        return parent::getReviewAuthors();
     }
 
 }
