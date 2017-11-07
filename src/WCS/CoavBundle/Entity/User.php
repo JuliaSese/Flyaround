@@ -27,20 +27,11 @@ class User
     private $id;
 
     /**
-    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", inversedBy="passengers")
+    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation")
     * @ORM\JoinColumn(nullable=false)
     */
     private $reservation;
 
-    /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="pilot")
-    */
-    private $pilots;
-
-    /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="userRated")
-    */
-    private $userRateds;
 
     /**
     * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reviewAuthor")

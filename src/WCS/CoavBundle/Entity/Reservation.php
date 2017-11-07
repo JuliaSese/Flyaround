@@ -37,7 +37,7 @@ class Reservation
     private $publicationDate;
 
     /**
-    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="passengers")
+    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $passenger;
@@ -45,7 +45,7 @@ class Reservation
 
     /**
      *
-     * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="reservations")
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\Flight")
      * @ORM\JoinColumn(nullable=false)
      */
     private $flight;
