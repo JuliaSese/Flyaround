@@ -35,7 +35,7 @@ class PlaneModel
     * @var string
      *
      * @ORM\Column(name="model", type="string", length=64)
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="plane")
     */
     private $model;
 
@@ -69,7 +69,7 @@ class PlaneModel
 
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="plane")
     */
     private $plane;
 

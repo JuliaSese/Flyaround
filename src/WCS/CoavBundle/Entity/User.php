@@ -111,24 +111,24 @@ class User
     private $isActive;
 
     /**
-    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation")
+    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", inversedBy="passenger")
     * @ORM\JoinColumn(nullable=false)
     */
     private $reservations;
 
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Reservation")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", mappedBy="flights")
     */
     private $flights;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight")
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="pilot")
     */
     private $pilot;
 
     /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviewAuthor)
+    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Review", mappedBy="reviewAuthor")
     */
     private $reviewAuthor;
 
