@@ -15,7 +15,7 @@ class User
 
     public function __toString()
     {
-        return $this->userName . $this->firstName . $this->email . $this->phoneNumber .  $this->role . $this->reviews . $this->isACertifiedPilot  . $this->isActive;
+        return $this->userName . $this->firstName . $this->email .  $this->role . $this->reviews . $this->isACertifiedPilot  . $this->isActive;
     }
     /**
      * @var int
@@ -66,12 +66,6 @@ class User
      */
     private $email;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="phoneNumber", type="string", length=32, nullable=false)
-     */
-    private $phoneNumber;
 
     /**
      * @var \DateTime
@@ -109,6 +103,11 @@ class User
      * @ORM\JoinColumn(nullable=true)
      */
     private $reviews;
+// 
+//     /**
+//  * @ORM\OneToMany(targetEntity="Review", mappedBy="reviewAuthor")
+//  */
+// private $reviews;
 
     /**
      * @var bool
@@ -230,31 +229,6 @@ class User
     {
         return $this->email;
     }
-
-    /**
-     * Set phoneNumber
-     *
-     * @param string $phoneNumber
-     *
-     * @return User
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        $this->phoneNumber = $phoneNumber;
-
-        return $this;
-    }
-
-    /**
-     * Get phoneNumber
-     *
-     * @return string
-     */
-    public function getPhoneNumber()
-    {
-        return $this->phoneNumber;
-    }
-
     /**
      * Set birthDate
      *

@@ -28,10 +28,6 @@ class PlaneModel
      */
     private $model;
 
-    /**
-    * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\Flight", mappedBy="plane")
-    */
-    private $planes;
 
     /**
      * @var string

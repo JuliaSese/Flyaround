@@ -18,7 +18,7 @@ class Review
         return $this->text . "-" . $this->userRated . $this->reviewAuthor . $this->publicationDate . $this->note;
     }
 
-    
+
     /**
      * @var int
      *
@@ -35,20 +35,17 @@ class Review
      */
     private $text;
 
+
     /**
-     * @var string
-     *
-     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="userRateds")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    * @ORM\ManyToOne(targetEntity="User")
+    * @ORM\JoinColumn(nullable=false)
+    */
     private $userRated;
 
     /**
-     * @var string
-     *
-     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="reviewAuthors")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    * @ORM\ManyToOne(targetEntity="User", inversedBy="reviews")
+    * @ORM\JoinColumn(nullable=false)
+    */
     private $reviewAuthor;
 
     /**
