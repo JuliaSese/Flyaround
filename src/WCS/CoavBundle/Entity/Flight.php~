@@ -12,7 +12,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Flight
 {
-    // 
+
+  public function __toString()
+  {
+      return $this->publicationDate->format('Y-m-d').': '.$this->departure.' => '.$this->arrival;
+  }
+
+    //
     // /**
     //  *
     //  * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\Reservation")

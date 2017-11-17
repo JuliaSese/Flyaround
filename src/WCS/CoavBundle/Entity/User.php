@@ -27,10 +27,10 @@ class User
     private $id;
 
     /**
-    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation")
+    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", inversedBy="passenger")
     * @ORM\JoinColumn(nullable=false)
     */
-    private $reservation;
+    private $reservations;
 
 
     /**
@@ -103,7 +103,7 @@ class User
      * @ORM\JoinColumn(nullable=true)
      */
     private $reviews;
-// 
+//
 //     /**
 //  * @ORM\OneToMany(targetEntity="Review", mappedBy="reviewAuthor")
 //  */
@@ -541,5 +541,15 @@ class User
     public function getReviewAuthors()
     {
         return $this->reviewAuthors;
+    }
+
+    /**
+     * Get reservations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReservations()
+    {
+        return $this->reservations;
     }
 }

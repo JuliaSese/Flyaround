@@ -12,6 +12,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Reservation
 {
+
+  public function __toString()
+  {
+      return "$this->flight";
+  }
     /**
      * @var int
      *
@@ -37,7 +42,7 @@ class Reservation
     private $publicationDate;
 
     /**
-    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User")
+    * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reservations")
      * @ORM\JoinColumn(nullable=false)
      */
     private $passenger;
@@ -241,5 +246,15 @@ class Reservation
     public function removeFlight(\WCS\CoavBundle\Entity\Flight $flight)
     {
         $this->flight->removeElement($flight);
+    }
+
+    /**
+     * Get passengers
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPassengers()
+    {
+        return $this->passengers;
     }
 }
