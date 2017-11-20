@@ -15,20 +15,46 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_41116f6c2e968047232f4effa98b6468c268682d4fd41936b014f4fe81c4dac3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_41116f6c2e968047232f4effa98b6468c268682d4fd41936b014f4fe81c4dac3->enter($__internal_41116f6c2e968047232f4effa98b6468c268682d4fd41936b014f4fe81c4dac3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
+        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700->enter($__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
 
-        $__internal_69c3f8390384d97d94dbffcf55ddf0778c00125b549dbd25ed2d6361d9aba855 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_69c3f8390384d97d94dbffcf55ddf0778c00125b549dbd25ed2d6361d9aba855->enter($__internal_69c3f8390384d97d94dbffcf55ddf0778c00125b549dbd25ed2d6361d9aba855_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
+        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab->enter($__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
 
         // line 1
-        echo "Hello World!
+        echo "<h1>Routes disponibles :</h1>
+    <ul>
+        <li>
+            <a href=\"";
+        // line 4
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("planemodel_index");
+        echo "\">Voir les avions</a>
+        </li>
+        <li>
+            <a href=\"";
+        // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_index");
+        echo "\">Voir les reservations</a>
+        </li>
+        <li>
+            <a href=\"";
+        // line 10
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("flight_index");
+        echo "\">Voir les vols</a>
+        </li>
+        <li>
+            <a href=\"";
+        // line 13
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("terrain_index");
+        echo "\">Voir les terrains</a>
+        </li>
+    </ul>
 ";
         
-        $__internal_41116f6c2e968047232f4effa98b6468c268682d4fd41936b014f4fe81c4dac3->leave($__internal_41116f6c2e968047232f4effa98b6468c268682d4fd41936b014f4fe81c4dac3_prof);
+        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700->leave($__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700_prof);
 
         
-        $__internal_69c3f8390384d97d94dbffcf55ddf0778c00125b549dbd25ed2d6361d9aba855->leave($__internal_69c3f8390384d97d94dbffcf55ddf0778c00125b549dbd25ed2d6361d9aba855_prof);
+        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab->leave($__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab_prof);
 
     }
 
@@ -37,9 +63,14 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
         return "WCSCoavBundle:Default:index.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  25 => 1,);
+        return array (  48 => 13,  42 => 10,  36 => 7,  30 => 4,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -52,7 +83,21 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
 
     public function getSourceContext()
     {
-        return new Twig_Source("Hello World!
+        return new Twig_Source("<h1>Routes disponibles :</h1>
+    <ul>
+        <li>
+            <a href=\"{{ path('planemodel_index') }}\">Voir les avions</a>
+        </li>
+        <li>
+            <a href=\"{{ path('reservation_index') }}\">Voir les reservations</a>
+        </li>
+        <li>
+            <a href=\"{{ path('flight_index') }}\">Voir les vols</a>
+        </li>
+        <li>
+            <a href=\"{{ path('terrain_index') }}\">Voir les terrains</a>
+        </li>
+    </ul>
 ", "WCSCoavBundle:Default:index.html.twig", "/var/www/html/flyaround/src/WCS/CoavBundle/Resources/views/Default/index.html.twig");
     }
 }

@@ -174,7 +174,18 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/planemodel')) {
+        // listing_index
+        if (0 === strpos($pathinfo, '/listing') && preg_match('#^/listing/(?P<reservation_id>\\d+)/flight/(?P<flight_id>[^/]++)/planemodel/(?P<planemodel_id>[^/]++)$#s', $pathinfo, $matches)) {
+            if ('GET' !== $canonicalMethod) {
+                $allow[] = 'GET';
+                goto not_listing_index;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'listing_index')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ListingController::indexAction',));
+        }
+        not_listing_index:
+
+        if (0 === strpos($pathinfo, '/planemodel')) {
             // planemodel_index
             if ('/planemodel' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
@@ -324,39 +335,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::newAction',  '_route' => 'review_new',);
             }
             not_review_new:
-
-            // review_show
-            if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_review_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::showAction',));
-            }
-            not_review_show:
-
-            // review_edit
-            if (preg_match('#^/review/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_review_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::editAction',));
-            }
-            not_review_edit:
-
-            // review_delete
-            if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_review_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::deleteAction',));
-            }
-            not_review_delete:
 
         }
 
