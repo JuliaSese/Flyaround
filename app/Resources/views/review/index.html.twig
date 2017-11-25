@@ -3,14 +3,43 @@
 
 {% block body %}
 <h1>Review index</h1>
-{% for review in reviews %}
-    <ul>
-        <li>Review's id: {{ review.id }}</li>
-        <li>Review's text: {{ review.text }}</li>
-        <li>Review's user rated: {{ review.userRated }}</li>
-        <li>Review's note: {{ review.note }}</li>
-        <li>Review's author: {{ review.reviewAuthor }}</li>
-        <li>Review's publicationDate: {{ review.publicationDate }}</li>
-    </ul>
-{% endfor %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Texte</th>
+            <th>Publicationdate</th>
+            <th>Note</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for review in reviews %}
+        <tr>
+            <td>{{ review.id }}</td>
+            <td>{{  review.text  }}</td>
+            <td>{{  review.publicationDate|date('Y-m-d')  }}</td>
+            <td>{{ review.note }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('review_show', { 'id': review.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('review_edit', { 'id': review.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('review_new') }}">Create a new review</a>
+    </li>
+</ul>
+
 {% endblock %}

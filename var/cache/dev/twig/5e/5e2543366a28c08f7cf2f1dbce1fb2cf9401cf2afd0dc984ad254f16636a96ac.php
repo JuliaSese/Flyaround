@@ -21,38 +21,53 @@ class __TwigTemplate_81ad724ed85d2188e2f9b15fe0386ee1266549f6a3babd97aba6ca8d962
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_28bf23abd46422e9050e28e4df5af1257ad664fc07be2a02ac0a4dcaeff897ad = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_28bf23abd46422e9050e28e4df5af1257ad664fc07be2a02ac0a4dcaeff897ad->enter($__internal_28bf23abd46422e9050e28e4df5af1257ad664fc07be2a02ac0a4dcaeff897ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/new.html.twig"));
+        $__internal_2c712f00be2e5859d2e92ff93477fcb4e0b572a437443322d2094b6a9ceb332c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2c712f00be2e5859d2e92ff93477fcb4e0b572a437443322d2094b6a9ceb332c->enter($__internal_2c712f00be2e5859d2e92ff93477fcb4e0b572a437443322d2094b6a9ceb332c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/new.html.twig"));
 
-        $__internal_fa6347c8354c7cca2e52feba97482548d8f800af0823387f7c2ecaf476d0a2be = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fa6347c8354c7cca2e52feba97482548d8f800af0823387f7c2ecaf476d0a2be->enter($__internal_fa6347c8354c7cca2e52feba97482548d8f800af0823387f7c2ecaf476d0a2be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/new.html.twig"));
+        $__internal_347c23e1446c552a81117ef7e5b42e5740309b6b1f3cb41d6c308444fbecbdcf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_347c23e1446c552a81117ef7e5b42e5740309b6b1f3cb41d6c308444fbecbdcf->enter($__internal_347c23e1446c552a81117ef7e5b42e5740309b6b1f3cb41d6c308444fbecbdcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_28bf23abd46422e9050e28e4df5af1257ad664fc07be2a02ac0a4dcaeff897ad->leave($__internal_28bf23abd46422e9050e28e4df5af1257ad664fc07be2a02ac0a4dcaeff897ad_prof);
+        $__internal_2c712f00be2e5859d2e92ff93477fcb4e0b572a437443322d2094b6a9ceb332c->leave($__internal_2c712f00be2e5859d2e92ff93477fcb4e0b572a437443322d2094b6a9ceb332c_prof);
 
         
-        $__internal_fa6347c8354c7cca2e52feba97482548d8f800af0823387f7c2ecaf476d0a2be->leave($__internal_fa6347c8354c7cca2e52feba97482548d8f800af0823387f7c2ecaf476d0a2be_prof);
+        $__internal_347c23e1446c552a81117ef7e5b42e5740309b6b1f3cb41d6c308444fbecbdcf->leave($__internal_347c23e1446c552a81117ef7e5b42e5740309b6b1f3cb41d6c308444fbecbdcf_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_051af17c642da0b79c52611722fd123001132a16a7db2edd3d4f5d2d6c73ebdf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_051af17c642da0b79c52611722fd123001132a16a7db2edd3d4f5d2d6c73ebdf->enter($__internal_051af17c642da0b79c52611722fd123001132a16a7db2edd3d4f5d2d6c73ebdf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b2d1381e212437cd9697e999e4f8bc54cc538dab7747f48ed2c8d0823c13fb4a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b2d1381e212437cd9697e999e4f8bc54cc538dab7747f48ed2c8d0823c13fb4a->enter($__internal_b2d1381e212437cd9697e999e4f8bc54cc538dab7747f48ed2c8d0823c13fb4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_6f3432f4f54d77bac2f61059118f1fedae64823bb24e3fa7f61074e2da8b2dc8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6f3432f4f54d77bac2f61059118f1fedae64823bb24e3fa7f61074e2da8b2dc8->enter($__internal_6f3432f4f54d77bac2f61059118f1fedae64823bb24e3fa7f61074e2da8b2dc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ec47d35338ff8ceeb8e453410212d6bf344a8caf06c51b24693ad49f5c039224 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ec47d35338ff8ceeb8e453410212d6bf344a8caf06c51b24693ad49f5c039224->enter($__internal_ec47d35338ff8ceeb8e453410212d6bf344a8caf06c51b24693ad49f5c039224_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "<h1>Review new</h1>
+
+";
+        // line 7
+        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
+        echo "
+    ";
+        // line 8
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
+        echo "
+    <input type=\"submit\" value=\"Create\" />
+";
+        // line 10
+        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
+        echo "
+
 ";
         
-        $__internal_6f3432f4f54d77bac2f61059118f1fedae64823bb24e3fa7f61074e2da8b2dc8->leave($__internal_6f3432f4f54d77bac2f61059118f1fedae64823bb24e3fa7f61074e2da8b2dc8_prof);
+        $__internal_ec47d35338ff8ceeb8e453410212d6bf344a8caf06c51b24693ad49f5c039224->leave($__internal_ec47d35338ff8ceeb8e453410212d6bf344a8caf06c51b24693ad49f5c039224_prof);
 
         
-        $__internal_051af17c642da0b79c52611722fd123001132a16a7db2edd3d4f5d2d6c73ebdf->leave($__internal_051af17c642da0b79c52611722fd123001132a16a7db2edd3d4f5d2d6c73ebdf_prof);
+        $__internal_b2d1381e212437cd9697e999e4f8bc54cc538dab7747f48ed2c8d0823c13fb4a->leave($__internal_b2d1381e212437cd9697e999e4f8bc54cc538dab7747f48ed2c8d0823c13fb4a_prof);
 
     }
 
@@ -68,7 +83,7 @@ class __TwigTemplate_81ad724ed85d2188e2f9b15fe0386ee1266549f6a3babd97aba6ca8d962
 
     public function getDebugInfo()
     {
-        return array (  49 => 5,  40 => 4,  11 => 1,);
+        return array (  62 => 10,  57 => 8,  53 => 7,  49 => 5,  40 => 4,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -86,6 +101,12 @@ class __TwigTemplate_81ad724ed85d2188e2f9b15fe0386ee1266549f6a3babd97aba6ca8d962
 
 {% block body %}
 <h1>Review new</h1>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type=\"submit\" value=\"Create\" />
+{{ form_end(form) }}
+
 {% endblock %}
 ", "review/new.html.twig", "/var/www/html/flyaround/app/Resources/views/review/new.html.twig");
     }

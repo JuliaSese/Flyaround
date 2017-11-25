@@ -64,10 +64,10 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
+            return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'phoneNumber', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
+        return ['__isInitialized__', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviewAuthors', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'userName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'birthDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'creationDate', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'role', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'note', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'phoneNumber', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'reviews', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isACertifiedPilot', '' . "\0" . 'WCS\\CoavBundle\\Entity\\User' . "\0" . 'isActive'];
     }
 
     /**
@@ -582,6 +582,28 @@ class User extends \WCS\CoavBundle\Entity\User implements \Doctrine\ORM\Proxy\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReservations', []);
 
         return parent::getReservations();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoneNumber', [$phoneNumber]);
+
+        return parent::setPhoneNumber($phoneNumber);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPhoneNumber()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhoneNumber', []);
+
+        return parent::getPhoneNumber();
     }
 
 }

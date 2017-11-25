@@ -1,6 +1,6 @@
 <?php
 
-/* :review:edit.html.twig */
+/* review/edit.html.twig */
 class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a0745b05 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a07
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":review:edit.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "review/edit.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,29 +21,29 @@ class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a07
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9948047177c060d6d9ac34671a492e327620c0b169450503efecc85d13bedff7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9948047177c060d6d9ac34671a492e327620c0b169450503efecc85d13bedff7->enter($__internal_9948047177c060d6d9ac34671a492e327620c0b169450503efecc85d13bedff7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":review:edit.html.twig"));
+        $__internal_8753c9adb16c347b553d0af6d7eb24e5bfbec41eebb05786f2759f2046bd8ba8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8753c9adb16c347b553d0af6d7eb24e5bfbec41eebb05786f2759f2046bd8ba8->enter($__internal_8753c9adb16c347b553d0af6d7eb24e5bfbec41eebb05786f2759f2046bd8ba8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/edit.html.twig"));
 
-        $__internal_c7619261065352f8f243af6d01e4d3a916281feeef9fa2890b0ca08b7c0e9662 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c7619261065352f8f243af6d01e4d3a916281feeef9fa2890b0ca08b7c0e9662->enter($__internal_c7619261065352f8f243af6d01e4d3a916281feeef9fa2890b0ca08b7c0e9662_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":review:edit.html.twig"));
+        $__internal_461a80475db647701819ec912469812ad3444e0934f0c3fba3d716aa6ddf3607 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_461a80475db647701819ec912469812ad3444e0934f0c3fba3d716aa6ddf3607->enter($__internal_461a80475db647701819ec912469812ad3444e0934f0c3fba3d716aa6ddf3607_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9948047177c060d6d9ac34671a492e327620c0b169450503efecc85d13bedff7->leave($__internal_9948047177c060d6d9ac34671a492e327620c0b169450503efecc85d13bedff7_prof);
+        $__internal_8753c9adb16c347b553d0af6d7eb24e5bfbec41eebb05786f2759f2046bd8ba8->leave($__internal_8753c9adb16c347b553d0af6d7eb24e5bfbec41eebb05786f2759f2046bd8ba8_prof);
 
         
-        $__internal_c7619261065352f8f243af6d01e4d3a916281feeef9fa2890b0ca08b7c0e9662->leave($__internal_c7619261065352f8f243af6d01e4d3a916281feeef9fa2890b0ca08b7c0e9662_prof);
+        $__internal_461a80475db647701819ec912469812ad3444e0934f0c3fba3d716aa6ddf3607->leave($__internal_461a80475db647701819ec912469812ad3444e0934f0c3fba3d716aa6ddf3607_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_46f952e0a8c90d758f3d160a7376ca9365b277a7c2e769dfa5ebb0d864640cbc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_46f952e0a8c90d758f3d160a7376ca9365b277a7c2e769dfa5ebb0d864640cbc->enter($__internal_46f952e0a8c90d758f3d160a7376ca9365b277a7c2e769dfa5ebb0d864640cbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_21659914495575877342814b315586631cf343d3be27ebe9adb0dcd567b3f922 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_21659914495575877342814b315586631cf343d3be27ebe9adb0dcd567b3f922->enter($__internal_21659914495575877342814b315586631cf343d3be27ebe9adb0dcd567b3f922_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_304e03bf249748954b6b54d716a6febd559eb4cf80edd7b0975fdd1038f6a8f1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_304e03bf249748954b6b54d716a6febd559eb4cf80edd7b0975fdd1038f6a8f1->enter($__internal_304e03bf249748954b6b54d716a6febd559eb4cf80edd7b0975fdd1038f6a8f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_96cbdce000770112e155c00e860d2ea561c56db8809e310222e7beda4cd34f8c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_96cbdce000770112e155c00e860d2ea561c56db8809e310222e7beda4cd34f8c->enter($__internal_96cbdce000770112e155c00e860d2ea561c56db8809e310222e7beda4cd34f8c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Review edit</h1>
@@ -67,15 +67,15 @@ class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a07
             <a href=\"";
         // line 13
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_index");
-        echo "\">Back to the list</a>
+        echo "\">Retourner à la liste</a>
         </li>
         <li>
-            ";
+                ";
         // line 16
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_start');
         echo "
-                <input type=\"submit\" value=\"Delete\">
-            ";
+                    <input type=\"submit\" value=\"Supprimer\">
+                ";
         // line 18
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_end');
         echo "
@@ -83,16 +83,16 @@ class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a07
     </ul>
 ";
         
-        $__internal_304e03bf249748954b6b54d716a6febd559eb4cf80edd7b0975fdd1038f6a8f1->leave($__internal_304e03bf249748954b6b54d716a6febd559eb4cf80edd7b0975fdd1038f6a8f1_prof);
+        $__internal_96cbdce000770112e155c00e860d2ea561c56db8809e310222e7beda4cd34f8c->leave($__internal_96cbdce000770112e155c00e860d2ea561c56db8809e310222e7beda4cd34f8c_prof);
 
         
-        $__internal_46f952e0a8c90d758f3d160a7376ca9365b277a7c2e769dfa5ebb0d864640cbc->leave($__internal_46f952e0a8c90d758f3d160a7376ca9365b277a7c2e769dfa5ebb0d864640cbc_prof);
+        $__internal_21659914495575877342814b315586631cf343d3be27ebe9adb0dcd567b3f922->leave($__internal_21659914495575877342814b315586631cf343d3be27ebe9adb0dcd567b3f922_prof);
 
     }
 
     public function getTemplateName()
     {
-        return ":review:edit.html.twig";
+        return "review/edit.html.twig";
     }
 
     public function isTraitable()
@@ -127,15 +127,15 @@ class __TwigTemplate_0a8df088ae7e1822970c3cf2aec363f0b9e0bfe91f2e68052608a5a3a07
 
     <ul>
         <li>
-            <a href=\"{{ path('review_index') }}\">Back to the list</a>
+            <a href=\"{{ path('review_index') }}\">Retourner à la liste</a>
         </li>
         <li>
-            {{ form_start(delete_form) }}
-                <input type=\"submit\" value=\"Delete\">
-            {{ form_end(delete_form) }}
+                {{ form_start(delete_form) }}
+                    <input type=\"submit\" value=\"Supprimer\">
+                {{ form_end(delete_form) }}
         </li>
     </ul>
 {% endblock %}
-", ":review:edit.html.twig", "/var/www/html/flyaround/app/Resources/views/review/edit.html.twig");
+", "review/edit.html.twig", "/var/www/html/flyaround/app/Resources/views/review/edit.html.twig");
     }
 }

@@ -15,7 +15,7 @@ class User
 
     public function __toString()
     {
-        return $this->userName . $this->firstName . $this->email .  $this->role . $this->reviews . $this->isACertifiedPilot  . $this->isActive;
+        return $this->firstName." " . $this->lastName;
     }
     /**
      * @var int
@@ -94,6 +94,13 @@ class User
      * @ORM\Column(name="note", type="smallint", nullable=true)
      */
     private $note;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="phoneNumber", type="integer", nullable=true)
+     */
+    private $phoneNumber;
 
 
     /**
@@ -551,5 +558,29 @@ class User
     public function getReservations()
     {
         return $this->reservations;
+    }
+
+    /**
+     * Set phoneNumber
+     *
+     * @param integer $phoneNumber
+     *
+     * @return User
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get phoneNumber
+     *
+     * @return integer
+     */
+    public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
     }
 }

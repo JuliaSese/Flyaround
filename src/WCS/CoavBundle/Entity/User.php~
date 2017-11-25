@@ -95,6 +95,13 @@ class User
      */
     private $note;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="phoneNumber", type="smallint", nullable=true)
+     */
+    private $phoneNumber;
+
 
     /**
      * @var string

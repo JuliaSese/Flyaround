@@ -21,74 +21,108 @@ class __TwigTemplate_0868e8a4fc11d1a85e35f892a9d4863451ec9549972e17fd6007ade6049
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_70c2f4b7c861c56323e629d759065f081af21c9cfe3e74d53a9f24e4b05ea9fa = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_70c2f4b7c861c56323e629d759065f081af21c9cfe3e74d53a9f24e4b05ea9fa->enter($__internal_70c2f4b7c861c56323e629d759065f081af21c9cfe3e74d53a9f24e4b05ea9fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/index.html.twig"));
+        $__internal_50672bc8fbb09ce8fc288d150e0a2dddcb5602c08e821ecf039a4981626eef54 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_50672bc8fbb09ce8fc288d150e0a2dddcb5602c08e821ecf039a4981626eef54->enter($__internal_50672bc8fbb09ce8fc288d150e0a2dddcb5602c08e821ecf039a4981626eef54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/index.html.twig"));
 
-        $__internal_7b10f844dbfdc5d2c1d288ae2de955409a52982612ba0ec3d4c3c1c5d41a3ce0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7b10f844dbfdc5d2c1d288ae2de955409a52982612ba0ec3d4c3c1c5d41a3ce0->enter($__internal_7b10f844dbfdc5d2c1d288ae2de955409a52982612ba0ec3d4c3c1c5d41a3ce0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/index.html.twig"));
+        $__internal_02f23bef8d008ca6153d25affe1f581a32026c5b302cf758c5711f658691b95d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_02f23bef8d008ca6153d25affe1f581a32026c5b302cf758c5711f658691b95d->enter($__internal_02f23bef8d008ca6153d25affe1f581a32026c5b302cf758c5711f658691b95d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "review/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_70c2f4b7c861c56323e629d759065f081af21c9cfe3e74d53a9f24e4b05ea9fa->leave($__internal_70c2f4b7c861c56323e629d759065f081af21c9cfe3e74d53a9f24e4b05ea9fa_prof);
+        $__internal_50672bc8fbb09ce8fc288d150e0a2dddcb5602c08e821ecf039a4981626eef54->leave($__internal_50672bc8fbb09ce8fc288d150e0a2dddcb5602c08e821ecf039a4981626eef54_prof);
 
         
-        $__internal_7b10f844dbfdc5d2c1d288ae2de955409a52982612ba0ec3d4c3c1c5d41a3ce0->leave($__internal_7b10f844dbfdc5d2c1d288ae2de955409a52982612ba0ec3d4c3c1c5d41a3ce0_prof);
+        $__internal_02f23bef8d008ca6153d25affe1f581a32026c5b302cf758c5711f658691b95d->leave($__internal_02f23bef8d008ca6153d25affe1f581a32026c5b302cf758c5711f658691b95d_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_62a294aed6594dd7ee6fa57eb1bfbe2fd32550217bf7af712a470b497396294e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_62a294aed6594dd7ee6fa57eb1bfbe2fd32550217bf7af712a470b497396294e->enter($__internal_62a294aed6594dd7ee6fa57eb1bfbe2fd32550217bf7af712a470b497396294e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cd69949c49182ffda60ec75f4f9bb745ef5cf58f508a38fc4b442c62cdb2a06f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cd69949c49182ffda60ec75f4f9bb745ef5cf58f508a38fc4b442c62cdb2a06f->enter($__internal_cd69949c49182ffda60ec75f4f9bb745ef5cf58f508a38fc4b442c62cdb2a06f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_6a0fe11e0a722f9bf72d7325c83aeeac8ff5c9f840b07fb8c03d6750269e3364 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6a0fe11e0a722f9bf72d7325c83aeeac8ff5c9f840b07fb8c03d6750269e3364->enter($__internal_6a0fe11e0a722f9bf72d7325c83aeeac8ff5c9f840b07fb8c03d6750269e3364_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ef04313919cb88d0af2d5ae9b274b5cc52429aac3f7c90812bf10eeb875d67ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ef04313919cb88d0af2d5ae9b274b5cc52429aac3f7c90812bf10eeb875d67ee->enter($__internal_ef04313919cb88d0af2d5ae9b274b5cc52429aac3f7c90812bf10eeb875d67ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "<h1>Welcome to the Review:index page</h1>
-";
-        // line 6
+        echo "<h1>Review index</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Texte</th>
+            <th>Publicationdate</th>
+            <th>Note</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    ";
+        // line 18
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["reviews"] ?? $this->getContext($context, "reviews")));
         foreach ($context['_seq'] as $context["_key"] => $context["review"]) {
-            // line 7
-            echo "    <ul>
-        <li>Review's id: ";
-            // line 8
+            // line 19
+            echo "        <tr>
+            <td>";
+            // line 20
             echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "id", array()), "html", null, true);
-            echo "</li>
-        <li>Review's text: ";
-            // line 9
+            echo "</td>
+            <td>";
+            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "text", array()), "html", null, true);
-            echo "</li>
-        <li>Review's user rated: ";
-            // line 10
-            echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "userRated", array()), "html", null, true);
-            echo "</li>
-        <li>Review's note: ";
-            // line 11
+            echo "</td>
+            <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["review"], "publicationDate", array()), "Y-m-d"), "html", null, true);
+            echo "</td>
+            <td>";
+            // line 23
             echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "note", array()), "html", null, true);
-            echo "</li>
-        <li>Review's author: ";
-            // line 12
-            echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "reviewAuthor", array()), "html", null, true);
-            echo "</li>
-        <li>Review's publicationDate: ";
-            // line 13
-            echo twig_escape_filter($this->env, $this->getAttribute($context["review"], "publicationDate", array()), "html", null, true);
-            echo "</li>
-    </ul>
-";
+            echo "</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href=\"";
+            // line 27
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_show", array("id" => $this->getAttribute($context["review"], "id", array()))), "html", null, true);
+            echo "\">show</a>
+                    </li>
+                    <li>
+                        <a href=\"";
+            // line 30
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_edit", array("id" => $this->getAttribute($context["review"], "id", array()))), "html", null, true);
+            echo "\">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['review'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 36
+        echo "    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href=\"";
+        // line 41
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_new");
+        echo "\">Create a new review</a>
+    </li>
+</ul>
+
+";
         
-        $__internal_6a0fe11e0a722f9bf72d7325c83aeeac8ff5c9f840b07fb8c03d6750269e3364->leave($__internal_6a0fe11e0a722f9bf72d7325c83aeeac8ff5c9f840b07fb8c03d6750269e3364_prof);
+        $__internal_ef04313919cb88d0af2d5ae9b274b5cc52429aac3f7c90812bf10eeb875d67ee->leave($__internal_ef04313919cb88d0af2d5ae9b274b5cc52429aac3f7c90812bf10eeb875d67ee_prof);
 
         
-        $__internal_62a294aed6594dd7ee6fa57eb1bfbe2fd32550217bf7af712a470b497396294e->leave($__internal_62a294aed6594dd7ee6fa57eb1bfbe2fd32550217bf7af712a470b497396294e_prof);
+        $__internal_cd69949c49182ffda60ec75f4f9bb745ef5cf58f508a38fc4b442c62cdb2a06f->leave($__internal_cd69949c49182ffda60ec75f4f9bb745ef5cf58f508a38fc4b442c62cdb2a06f_prof);
 
     }
 
@@ -104,7 +138,7 @@ class __TwigTemplate_0868e8a4fc11d1a85e35f892a9d4863451ec9549972e17fd6007ade6049
 
     public function getDebugInfo()
     {
-        return array (  79 => 13,  75 => 12,  71 => 11,  67 => 10,  63 => 9,  59 => 8,  56 => 7,  52 => 6,  49 => 5,  40 => 4,  11 => 1,);
+        return array (  115 => 41,  108 => 36,  96 => 30,  90 => 27,  83 => 23,  79 => 22,  75 => 21,  71 => 20,  68 => 19,  64 => 18,  49 => 5,  40 => 4,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -121,17 +155,46 @@ class __TwigTemplate_0868e8a4fc11d1a85e35f892a9d4863451ec9549972e17fd6007ade6049
 
 
 {% block body %}
-<h1>Welcome to the Review:index page</h1>
-{% for review in reviews %}
-    <ul>
-        <li>Review's id: {{ review.id }}</li>
-        <li>Review's text: {{ review.text }}</li>
-        <li>Review's user rated: {{ review.userRated }}</li>
-        <li>Review's note: {{ review.note }}</li>
-        <li>Review's author: {{ review.reviewAuthor }}</li>
-        <li>Review's publicationDate: {{ review.publicationDate }}</li>
-    </ul>
-{% endfor %}
+<h1>Review index</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Texte</th>
+            <th>Publicationdate</th>
+            <th>Note</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for review in reviews %}
+        <tr>
+            <td>{{ review.id }}</td>
+            <td>{{  review.text  }}</td>
+            <td>{{  review.publicationDate|date('Y-m-d')  }}</td>
+            <td>{{ review.note }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href=\"{{ path('review_show', { 'id': review.id }) }}\">show</a>
+                    </li>
+                    <li>
+                        <a href=\"{{ path('review_edit', { 'id': review.id }) }}\">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href=\"{{ path('review_new') }}\">Create a new review</a>
+    </li>
+</ul>
+
 {% endblock %}
 ", "review/index.html.twig", "/var/www/html/flyaround/app/Resources/views/review/index.html.twig");
     }

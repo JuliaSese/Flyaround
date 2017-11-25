@@ -15,11 +15,11 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700->enter($__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
+        $__internal_205e135a8c7e3b7bc42334c329eacbeeb1663c0f6b6a55166ead14284aa88e23 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_205e135a8c7e3b7bc42334c329eacbeeb1663c0f6b6a55166ead14284aa88e23->enter($__internal_205e135a8c7e3b7bc42334c329eacbeeb1663c0f6b6a55166ead14284aa88e23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
 
-        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab->enter($__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
+        $__internal_1cbfeb198c1e1d6405749319e725116d16659602842d559d88df55ec5dde3647 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1cbfeb198c1e1d6405749319e725116d16659602842d559d88df55ec5dde3647->enter($__internal_1cbfeb198c1e1d6405749319e725116d16659602842d559d88df55ec5dde3647_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WCSCoavBundle:Default:index.html.twig"));
 
         // line 1
         echo "<h1>Routes disponibles :</h1>
@@ -48,13 +48,19 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("terrain_index");
         echo "\">Voir les terrains</a>
         </li>
+        <li>
+            <a href=\"";
+        // line 16
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_index");
+        echo "\">Voir tous les avis utilisateurs</a>
+        </li>
     </ul>
 ";
         
-        $__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700->leave($__internal_c8b6b2fe556d18636cd6771eb156ab768d04971436d4d8aad34969b06fc51700_prof);
+        $__internal_205e135a8c7e3b7bc42334c329eacbeeb1663c0f6b6a55166ead14284aa88e23->leave($__internal_205e135a8c7e3b7bc42334c329eacbeeb1663c0f6b6a55166ead14284aa88e23_prof);
 
         
-        $__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab->leave($__internal_d60864baaa24a7bec5244de517b257d6fa2e4a1813d4bb61aa7a6f913de637ab_prof);
+        $__internal_1cbfeb198c1e1d6405749319e725116d16659602842d559d88df55ec5dde3647->leave($__internal_1cbfeb198c1e1d6405749319e725116d16659602842d559d88df55ec5dde3647_prof);
 
     }
 
@@ -70,7 +76,7 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
 
     public function getDebugInfo()
     {
-        return array (  48 => 13,  42 => 10,  36 => 7,  30 => 4,  25 => 1,);
+        return array (  54 => 16,  48 => 13,  42 => 10,  36 => 7,  30 => 4,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -96,6 +102,9 @@ class __TwigTemplate_c8763cf63f5696531bcaf2c90800dfcbf2221d3e8a7de8b7e27130482d2
         </li>
         <li>
             <a href=\"{{ path('terrain_index') }}\">Voir les terrains</a>
+        </li>
+        <li>
+            <a href=\"{{ path('review_index') }}\">Voir tous les avis utilisateurs</a>
         </li>
     </ul>
 ", "WCSCoavBundle:Default:index.html.twig", "/var/www/html/flyaround/src/WCS/CoavBundle/Resources/views/Default/index.html.twig");
