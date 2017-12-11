@@ -3,14 +3,15 @@
 namespace WCS\CoavBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * User
  *
- * @ORM\Table(name="user")
+ * @ORM\Table(name="`user`")
  * @ORM\Entity(repositoryClass="WCS\CoavBundle\Repository\UserRepository")
  */
-class User
+class User extends BaseUser
 {
 
     public function __toString()
@@ -24,7 +25,7 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
     * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", inversedBy="passenger")
@@ -38,12 +39,12 @@ class User
     */
     private $reviewAuthors;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="userName", type="string", length=32, nullable=false)
-     */
-    private $userName;
+    // /**
+    //  * @var string
+    //  *
+    //  * @ORM\Column(name="userName", type="string", length=32, nullable=false)
+    //  */
+    // private $userName;
 
     /**
      * @var string
@@ -59,12 +60,12 @@ class User
      */
     private $lastName;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=64, nullable=false)
-     */
-    private $email;
+    // /**
+    //  * @var string
+    //  *
+    //  * @ORM\Column(name="email", type="string", length=64, nullable=false)
+    //  */
+    // private $email;
 
 
     /**
@@ -141,29 +142,29 @@ class User
         return $this->id;
     }
 
-    /**
-     * Set userName
-     *
-     * @param string $userName
-     *
-     * @return User
-     */
-    public function setUserName($userName)
-    {
-        $this->userName = $userName;
-
-        return $this;
-    }
-
-    /**
-     * Get userName
-     *
-     * @return string
-     */
-    public function getUserName()
-    {
-        return $this->userName;
-    }
+    // /**
+    //  * Set userName
+    //  *
+    //  * @param string $userName
+    //  *
+    //  * @return User
+    //  */
+    // public function setUserName($userName)
+    // {
+    //     $this->userName = $userName;
+    //
+    //     return $this;
+    // }
+    //
+    // /**
+    //  * Get userName
+    //  *
+    //  * @return string
+    //  */
+    // public function getUserName()
+    // {
+    //     return $this->userName;
+    // }
 
     /**
      * Set firstName
@@ -412,6 +413,8 @@ class User
         $this->pilots = new \Doctrine\Common\Collections\ArrayCollection();
         $this->userRateds = new \Doctrine\Common\Collections\ArrayCollection();
         $this->reviewAuthors = new \Doctrine\Common\Collections\ArrayCollection();
+
+        parent::__construct();
     }
 
     /**
