@@ -103,6 +103,386 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/l')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // fos_user_security_login
+                if ('/login' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_security_login;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::loginAction',  '_route' => 'fos_user_security_login',);
+                }
+                not_fos_user_security_login:
+
+                // fos_user_security_check
+                if ('/login_check' === $pathinfo) {
+                    if ('POST' !== $canonicalMethod) {
+                        $allow[] = 'POST';
+                        goto not_fos_user_security_check;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::checkAction',  '_route' => 'fos_user_security_check',);
+                }
+                not_fos_user_security_check:
+
+            }
+
+            // fos_user_security_logout
+            if ('/logout' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_logout;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::logoutAction',  '_route' => 'fos_user_security_logout',);
+            }
+            not_fos_user_security_logout:
+
+            // listing_index
+            if (0 === strpos($pathinfo, '/listing') && preg_match('#^/listing/(?P<reservation_id>\\d+)/flight/(?P<flight_id>[^/]++)/planemodel/(?P<planemodel_id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_listing_index;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'listing_index')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ListingController::indexAction',));
+            }
+            not_listing_index:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/profile')) {
+            // fos_user_profile_show
+            if ('/profile' === $trimmedPathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_fos_user_profile_show;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
+            }
+            not_fos_user_profile_show:
+
+            // fos_user_profile_edit
+            if ('/profile/edit' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_profile_edit;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
+            }
+            not_fos_user_profile_edit:
+
+            // fos_user_change_password
+            if ('/profile/change-password' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_change_password;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
+            }
+            not_fos_user_change_password:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/planemodel')) {
+            // planemodel_index
+            if ('/planemodel' === $trimmedPathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_planemodel_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'planemodel_index');
+                }
+
+                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::indexAction',  '_route' => 'planemodel_index',);
+            }
+            not_planemodel_index:
+
+            // planemodel_new
+            if ('/planemodel/new' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_planemodel_new;
+                }
+
+                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::newAction',  '_route' => 'planemodel_new',);
+            }
+            not_planemodel_new:
+
+            // planemodel_show
+            if (preg_match('#^/planemodel/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_planemodel_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::showAction',));
+            }
+            not_planemodel_show:
+
+            // planemodel_edit
+            if (preg_match('#^/planemodel/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_planemodel_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::editAction',));
+            }
+            not_planemodel_edit:
+
+            // planemodel_delete
+            if (preg_match('#^/planemodel/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_planemodel_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::deleteAction',));
+            }
+            not_planemodel_delete:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/re')) {
+            if (0 === strpos($pathinfo, '/register')) {
+                // fos_user_registration_register
+                if ('/register' === $trimmedPathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_registration_register;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'fos_user_registration_register');
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'fos_user_registration_register',);
+                }
+                not_fos_user_registration_register:
+
+                // fos_user_registration_check_email
+                if ('/register/check-email' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_registration_check_email;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
+                }
+                not_fos_user_registration_check_email:
+
+                if (0 === strpos($pathinfo, '/register/confirm')) {
+                    // fos_user_registration_confirm
+                    if (preg_match('#^/register/confirm/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_fos_user_registration_confirm;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_registration_confirm')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmAction',));
+                    }
+                    not_fos_user_registration_confirm:
+
+                    // fos_user_registration_confirmed
+                    if ('/register/confirmed' === $pathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_fos_user_registration_confirmed;
+                        }
+
+                        return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
+                    }
+                    not_fos_user_registration_confirmed:
+
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/resetting')) {
+                // fos_user_resetting_request
+                if ('/resetting/request' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_resetting_request;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::requestAction',  '_route' => 'fos_user_resetting_request',);
+                }
+                not_fos_user_resetting_request:
+
+                // fos_user_resetting_reset
+                if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_resetting_reset;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::resetAction',));
+                }
+                not_fos_user_resetting_reset:
+
+                // fos_user_resetting_send_email
+                if ('/resetting/send-email' === $pathinfo) {
+                    if ('POST' !== $canonicalMethod) {
+                        $allow[] = 'POST';
+                        goto not_fos_user_resetting_send_email;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+                }
+                not_fos_user_resetting_send_email:
+
+                // fos_user_resetting_check_email
+                if ('/resetting/check-email' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_resetting_check_email;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+                }
+                not_fos_user_resetting_check_email:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/reservation')) {
+                // reservation_index
+                if ('/reservation' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_reservation_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'reservation_index');
+                    }
+
+                    return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::indexAction',  '_route' => 'reservation_index',);
+                }
+                not_reservation_index:
+
+                // reservation_new
+                if ('/reservation/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_reservation_new;
+                    }
+
+                    return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::newAction',  '_route' => 'reservation_new',);
+                }
+                not_reservation_new:
+
+                // reservation_show
+                if (preg_match('#^/reservation/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_reservation_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::showAction',));
+                }
+                not_reservation_show:
+
+                // reservation_edit
+                if (preg_match('#^/reservation/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_reservation_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::editAction',));
+                }
+                not_reservation_edit:
+
+                // reservation_delete
+                if (preg_match('#^/reservation/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_reservation_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::deleteAction',));
+                }
+                not_reservation_delete:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/review')) {
+                // review_index
+                if ('/review' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_review_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'review_index');
+                    }
+
+                    return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::indexAction',  '_route' => 'review_index',);
+                }
+                not_review_index:
+
+                // review_new
+                if ('/review/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_review_new;
+                    }
+
+                    return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::newAction',  '_route' => 'review_new',);
+                }
+                not_review_new:
+
+                // review_show
+                if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_review_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::showAction',));
+                }
+                not_review_show:
+
+                // review_edit
+                if (preg_match('#^/review/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_review_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::editAction',));
+                }
+                not_review_edit:
+
+                // review_delete
+                if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_review_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::deleteAction',));
+                }
+                not_review_delete:
+
+            }
+
+        }
+
         // wcs_coav_homepage
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
@@ -171,203 +551,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'flight_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\FlightController::deleteAction',));
             }
             not_flight_delete:
-
-        }
-
-        // listing_index
-        if (0 === strpos($pathinfo, '/listing') && preg_match('#^/listing/(?P<reservation_id>\\d+)/flight/(?P<flight_id>[^/]++)/planemodel/(?P<planemodel_id>[^/]++)$#s', $pathinfo, $matches)) {
-            if ('GET' !== $canonicalMethod) {
-                $allow[] = 'GET';
-                goto not_listing_index;
-            }
-
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'listing_index')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ListingController::indexAction',));
-        }
-        not_listing_index:
-
-        if (0 === strpos($pathinfo, '/planemodel')) {
-            // planemodel_index
-            if ('/planemodel' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_planemodel_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'planemodel_index');
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::indexAction',  '_route' => 'planemodel_index',);
-            }
-            not_planemodel_index:
-
-            // planemodel_new
-            if ('/planemodel/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_planemodel_new;
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::newAction',  '_route' => 'planemodel_new',);
-            }
-            not_planemodel_new:
-
-            // planemodel_show
-            if (preg_match('#^/planemodel/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_planemodel_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::showAction',));
-            }
-            not_planemodel_show:
-
-            // planemodel_edit
-            if (preg_match('#^/planemodel/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_planemodel_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::editAction',));
-            }
-            not_planemodel_edit:
-
-            // planemodel_delete
-            if (preg_match('#^/planemodel/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_planemodel_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'planemodel_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\PlaneModelController::deleteAction',));
-            }
-            not_planemodel_delete:
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/reservation')) {
-            // reservation_index
-            if ('/reservation' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_reservation_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'reservation_index');
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::indexAction',  '_route' => 'reservation_index',);
-            }
-            not_reservation_index:
-
-            // reservation_new
-            if ('/reservation/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_reservation_new;
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::newAction',  '_route' => 'reservation_new',);
-            }
-            not_reservation_new:
-
-            // reservation_show
-            if (preg_match('#^/reservation/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_reservation_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::showAction',));
-            }
-            not_reservation_show:
-
-            // reservation_edit
-            if (preg_match('#^/reservation/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_reservation_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::editAction',));
-            }
-            not_reservation_edit:
-
-            // reservation_delete
-            if (preg_match('#^/reservation/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_reservation_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReservationController::deleteAction',));
-            }
-            not_reservation_delete:
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/review')) {
-            // review_index
-            if ('/review' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_review_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'review_index');
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::indexAction',  '_route' => 'review_index',);
-            }
-            not_review_index:
-
-            // review_new
-            if ('/review/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_review_new;
-                }
-
-                return array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::newAction',  '_route' => 'review_new',);
-            }
-            not_review_new:
-
-            // review_show
-            if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_review_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_show')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::showAction',));
-            }
-            not_review_show:
-
-            // review_edit
-            if (preg_match('#^/review/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_review_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_edit')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::editAction',));
-            }
-            not_review_edit:
-
-            // review_delete
-            if (preg_match('#^/review/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_review_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'review_delete')), array (  '_controller' => 'WCS\\CoavBundle\\Controller\\ReviewController::deleteAction',));
-            }
-            not_review_delete:
 
         }
 

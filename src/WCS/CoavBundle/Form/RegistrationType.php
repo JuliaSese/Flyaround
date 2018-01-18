@@ -11,7 +11,7 @@ class RegistrationType extends AbstractType
 
    {
        $builder->add('first_name')->add('last_name')->add('phoneNumber')->add('birthDate')->add('creationDate')->add('role')->add('note')->add('isACertifiedPilot')->add('isActive')->add('reservations')->add('reviews');
-   
+
    }
 
    public function getParent()

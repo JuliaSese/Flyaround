@@ -18,6 +18,22 @@
                 <td>{{ flight.arrival }}</td>
             </tr>
             <tr>
+                <th>Cruise Speed</th>
+                <td>{{ cruiseSpeed }} km/h
+                </td>
+            </tr>
+            <tr>
+                <th>Distance</th>
+                <td>{% if distance %}{{ distance|number_format(2, ',', ' ') }} {% endif %}
+                    {{ unit }}
+                </td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{% if time %}{{ time|number_format(0, ',', ' ') }} minutes {% endif %}
+                </td>
+            </tr>
+            <tr>
                 <th>Nbfreeseats</th>
                 <td>{{ flight.nbFreeSeats }}</td>
             </tr>
